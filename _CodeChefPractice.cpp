@@ -1,12 +1,49 @@
 #include <iostream>
 using namespace std;
+
 int main(int argc, char const *argv[])
 {
-    int t;
-    for (int i = 0; i < t; i++)
+    int x;
+    cin >> x;
+
+    for (int i = 0; i < x; i++)
     {
-        int x = 4, y, z;
-        int arr[x];
+        int y;
+        cin >> y;
+
+        int arr[y];
+        char arr2[y + 1];
+        // int arr2[y - 1];
+
+        for (int i = 0; i < y; i++)
+        {
+
+            cin >> arr[i];
+        }
+
+        for (int i = 0; i < y; i++)
+        {
+
+            cin >> arr2[i];
+        }
+
+        int kecil = arr[0];
+
+        for (int i = 0; i < y; i++)
+        {
+
+            if (arr2[i] == '0')
+            {
+
+                if (arr[i] < kecil)
+                {
+
+                    kecil = arr[i];
+                }
+            }
+                }
+
+        cout << kecil << endl;
     }
 
     return 0;
